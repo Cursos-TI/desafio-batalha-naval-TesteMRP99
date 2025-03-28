@@ -24,10 +24,10 @@ int main() {
         }
     }
     
-    //criando a Cruz
+    //criando a Cruz utilizando loop for
     
-         int cruzX = 5; // Coordenada da linha central da cruz, evitando que entre em coolisão com os outros itens
-    int cruzY = 2; // Coordenada da coluna central da cruz, evitando que entre em colisão com os outros itens
+         int cruzX = 5; // "Coordenada" para declarar onde a cruz ficará localizada
+    int cruzY = 2; 
     
     for (int i = -1; i <= 1; i++) {
         tabuleiro[cruzX + i][cruzY] = '2'; // Linha vertical
@@ -36,8 +36,8 @@ int main() {
         tabuleiro[cruzX][cruzY + j] = '2'; // Linha horizontal
     }
     
-    // Criando o octaedro na parte inferior
-     int meio = COLUNA / 2;
+    // Criando o octaedro 
+     int meio = COLUNA / 2; //determinando posição do octaedro
     for (int i = LINHA - 3; i < LINHA; i++) { // Linha vertical 
         tabuleiro[i][meio] = '3';
    	 }
